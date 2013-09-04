@@ -2,7 +2,8 @@
 
 Configuration files for the raspberry pi dashboards.
 
-## Files
+## Installation
+### Files
 
 packages.txt contains the installed debs (the result of `dpkg --get-selections > packages.txt`)
 
@@ -11,7 +12,7 @@ autostart		/etc/xdg/lxsession/LXDE/autostart
 config.txt		/boot/config.txt
 ```
 
-## Audio / Video
+### Audio / Video
 The Pi looks for an active connection on the HDMI connector during boot. If it finds one, it will try to set the correct video mode and switch the audio to HDMI out. When the Pi is 
 connected to a HDMI-to-DVI converter the system guesses wrong. The output is hardcoded in `/boot/config.txt`.
 
@@ -32,3 +33,7 @@ to test analogue output. And to test HDMI.
 ```
 ./hello_audio.bin 1
 ```
+
+## TODO
+ - Exchange ssh keys
+ - Deploy with Chef, Puppet or Ansible 
